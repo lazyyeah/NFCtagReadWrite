@@ -7,6 +7,7 @@ import java.util.Arrays;
 import android.nfc.NdefRecord;
 
 public class TextRecord {
+
     private final String mText;
 
     private TextRecord(String text) {
@@ -41,6 +42,11 @@ public class TextRecord {
                     payload.length - languageCodeLength - 1, textEncoding);
 
             return new TextRecord(text);
+
+
+
+
+
 
         } catch (Exception e) {
             throw new IllegalArgumentException();

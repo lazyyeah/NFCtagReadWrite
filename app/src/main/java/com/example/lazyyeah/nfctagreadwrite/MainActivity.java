@@ -13,6 +13,7 @@ import android.nfc.tech.Ndef;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
     private TextView mInputText;
@@ -48,6 +49,7 @@ public class MainActivity extends Activity {
             NdefMessage ndefMessage = new NdefMessage(
                     new NdefRecord[] { createTextRecord(mText) });
             writeTag(ndefMessage, tag);
+            Toast.makeText(this, "写入了Ծ.Ծ", Toast.LENGTH_LONG).show();
         }
     }
 
